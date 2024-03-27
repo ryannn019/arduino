@@ -1,0 +1,61 @@
+int led[5]; //DEFINIR QUANTOS LEDS TERA NO CONJUNTO
+  
+void setup()
+{
+  
+  led[0] = 13; // DEFINA QUAL VOU REFERENCIAR 
+  led[1]= 12;
+  led[2]= 11;
+  led[3]= 10;
+  led[4]= 9;
+  
+  //DEFINA COMO O LED SE COMPORTA 
+  pinMode(led [0], OUTPUT);// ->  verde/ carro
+  pinMode(led [1], OUTPUT);// ->  amarelo/ carro
+  pinMode(led [2], OUTPUT);// ->  vermelho/carro
+  pinMode(led [3], OUTPUT);// ->  verde/pedestres
+  pinMode(led [4], OUTPUT);// ->  vermelho/pedestre
+}
+
+
+void loop() 
+{
+  // REALIZA A AÇÃO DO LED
+  digitalWrite(led[0], HIGH); 
+  digitalWrite(led[1], LOW);
+  digitalWrite(led[2], LOW);
+  
+  //pedestre
+  
+  digitalWrite(led[3], LOW);
+  digitalWrite(led[4], HIGH);
+  
+  
+ 
+  delay(1500);
+  
+  
+  digitalWrite(led[0], LOW); 
+  digitalWrite(led[1], HIGH);
+  digitalWrite(led[2], LOW);
+  
+   //pedestre
+  
+  digitalWrite(led[3], LOW);
+  digitalWrite(led[4], HIGH);
+  
+  delay(750);
+  
+  
+  digitalWrite(led[0], LOW);
+  digitalWrite(led[1], LOW);
+  digitalWrite(led[2], HIGH);
+  
+  
+   //pedestre
+  
+  digitalWrite(led[3], HIGH);
+  digitalWrite(led[4], LOW);
+  delay(1500);
+   
+}
